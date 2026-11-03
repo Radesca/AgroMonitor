@@ -141,12 +141,11 @@ ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Usuário inicial para o primeiro acesso
--- login: admin@agromonitor.com | senha: admin123
--- (troque a senha depois de logar, em VIEW/usuario/)
+-- Usuário inicial: NÃO há mais usuário nem senha padrão neste arquivo.
+-- Para criar o primeiro administrador, gere o comando com:
+--   php SQL/gerar-admin.php "Seu Nome" seu@email.com "sua-senha-forte"
+-- e execute no MySQL o INSERT que ele imprimir.
 --
-INSERT INTO `usuario` (`nome`, `email`, `senha`, `perfil`) VALUES
-('Administrador', 'admin@agromonitor.com', '$2y$10$wiXoF.lPjiB5CfDoVAvivuED/JrelSXBPhlcIAEq92icNHuNq12e6', 'admin');
 
 --
 -- Restrições para despejos de tabelas
